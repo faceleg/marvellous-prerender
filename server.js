@@ -7,7 +7,6 @@ var server = prerender({
   logRequests: true
 })
 
-
 server.use(prerender.sendPrerenderHeader())
 // server.use(prerender.basicAuth());
 // server.use(prerender.whitelist());
@@ -17,6 +16,6 @@ server.use(prerender.removeScriptTags())
 server.use(prerender.httpHeaders())
 // server.use(prerender.inMemoryHtmlCache());
 // server.use(prerender.s3HtmlCache());
-server.use(require('prerender-mongo'))
+// server.use(require('prerender-mongo'))
 
 server.start()
