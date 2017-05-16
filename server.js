@@ -16,6 +16,7 @@ server.use(prerender.removeScriptTags());
 server.use(prerender.httpHeaders());
 // server.use(prerender.inMemoryHtmlCache());
 // server.use(prerender.s3HtmlCache());
+console.log(process.env.MONGOLAB_URI)
 server.use(require('prerender-mongodb-cache'));
 
 server.start();
